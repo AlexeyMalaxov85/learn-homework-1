@@ -27,6 +27,7 @@ def main(user_age):
   else:
     return "Вы должны работать."
     
+
 decision = main(user_age)
 print(decision)
 
