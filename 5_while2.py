@@ -15,13 +15,31 @@
     
 """
 
-questions_and_answers = {}
+from random import choice  
+
+
+questions_and_answers = {
+                      "Как дела?": ["Хорошо!", "Нормально!", "Отлично!", "Пойдет!"],
+                        "Что делаешь?": ["Программирую", "Отдыхаю", "Гуляю", "Пью кофе"]
+                        }
 
 def ask_user(answers_dict):
-    """
-    Замените pass на ваш код
-    """
-    pass
+  
+  question = input("Задай вопрос: ")
+  while True:
+    if question in answers_dict:
+      print(choice(answers_dict.get(question)))
+      break
+    else:
+      question = input("Спроси еще чего: ")
     
 if __name__ == "__main__":
     ask_user(questions_and_answers)
+
+
+
+
+# from random import choice    
+
+# a = {1: 101, 2: 102, 3: 103}
+# print(choice(list(a.keys())))
