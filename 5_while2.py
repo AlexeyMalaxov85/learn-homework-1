@@ -19,13 +19,13 @@ from random import choice
 
 
 questions_and_answers = {
-                      "Как дела?": ["Хорошо!", "Нормально!", "Отлично!", "Пойдет!"],
-                        "Что делаешь?": ["Программирую", "Отдыхаю", "Гуляю", "Пью кофе"]
+                      "как дела?": ["Хорошо!", "Нормально!", "Отлично!", "Пойдет!"],
+                        "что делаешь?": ["Программирую", "Отдыхаю", "Гуляю", "Пью кофе"]
                         }
 
 def ask_user(answers_dict):
   
-  question = input("Задай вопрос: ")
+  question = input("Задай вопрос: ").lower().strip()
   while True:
     if question in answers_dict:
       print(choice(answers_dict.get(question)))
@@ -35,4 +35,3 @@ def ask_user(answers_dict):
     
 if __name__ == "__main__":
     ask_user(questions_and_answers)
-
