@@ -36,10 +36,3 @@ def ask_user(answers_dict):
 if __name__ == "__main__":
     ask_user(questions_and_answers)
 
-
-
-
-# from random import choice    
-
-# a = {1: 101, 2: 102, 3: 103}
-# print(choice(list(a.keys())))
